@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    width: 320px;
+    padding: 20px;
+    border-radius: 16px;
+    background: #222831;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.display {
+    width: 100%;
+    background: #393e46;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    padding: 16px 12px 8px 12px;
+    box-sizing: border-box;
+    min-height: 60px;
+    color: #fff;
+    text-align: right;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.previous-operand {
+    color: #aaa;
+    font-size: 1rem;
+    min-height: 1.2em;
+}
+
+.current-operand {
+    font-size: 2.2rem;
+    min-height: 1.5em;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    grid-gap: 12px;
+}
+
+.btn {
+    padding: 18px 0;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background: #00adb5;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+    background: #008891;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn.operator {
+    background: #393e46;
+    color: #00adb5;
+}
+
+.btn.operator:hover {
+    background: #222831;
+}
+
+.btn.equals {
+    background: #f96d00;
+    color: #fff;
+    grid-row: span 2;
+}
+
+.btn.equals:hover {
+    background: #e55a00;
+}
+
+.btn.clear {
+    background: #f96d00;
+    color: #fff;
+}
+
+.btn.clear:hover {
+    background: #e55a00;
+}
+
+.btn.zero {
+    grid-column: span 2;
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        width: 98vw;
+        padding: 8px;
+    }
+    .buttons {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 6px;
+    }
+    .btn {
+        font-size: 1rem;
+        padding: 12px 0;
+    }
+} 
